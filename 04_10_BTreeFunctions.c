@@ -211,7 +211,7 @@ int main()
 {
     struct BPTreeNode *root = createTree();
 
-    int keys[] = {10, 20, 5, 6, 12, 30, 7, 17};
+    int keys[] = {10, 20, 5, 6, 12, 30, 7, 16};
     int n = sizeof(keys) / sizeof(keys[0]);
 
     for (int i = 0; i < n; i++)
