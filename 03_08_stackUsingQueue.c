@@ -35,7 +35,7 @@ void enqueue(Queue *q, int data)
 {
     if (isFullQueue(q))
     {
-        printf("Queue Overflow\n");
+        printf("Queue Overflow \n");
         return;
     }
     if (isEmptyQueue(q))
@@ -49,7 +49,7 @@ int dequeue(Queue *q)
 {
     if (isEmptyQueue(q))
     {
-        printf("Queue Underflow\n");
+        printf("Queue Underflow \n");
         return -1;
     }
     int data = q->arr[q->front++];

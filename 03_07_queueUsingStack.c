@@ -34,7 +34,7 @@ void push(Stack *s, int data)
 {
     if (isFull(s))
     {
-        printf("Stack Overflow\n");
+        printf("Stack Overflow \n");
         return;
     }
     s->arr[++(s->top)] = data;
@@ -44,7 +44,7 @@ int pop(Stack *s)
 {
     if (isEmpty(s))
     {
-        printf("Stack Underflow\n");
+        printf("Stack Underflow \n");
         return -1;
     }
     return s->arr[(s->top)--];

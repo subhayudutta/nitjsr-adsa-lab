@@ -63,7 +63,7 @@ int main()
     int choice, value;
     while (1)
     {
-        printf("\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\nEnter choice: ");
+        printf("\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit \nEnter choice: ");
         scanf("%d", &choice);
         switch (choice)
         {
