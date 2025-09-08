@@ -9,7 +9,6 @@ typedef struct
     int top;
 } Stack;
 
-// Queue using two stacks
 typedef struct
 {
     Stack s1;
@@ -21,7 +20,6 @@ void initStack(Stack *s)
     s->top = -1;
 }
 
-// Stack functions
 int isEmpty(Stack *s)
 {
     return s->top == -1;
@@ -113,7 +111,6 @@ int dequeue_costlyPop(Queue *q)
     return val;
 }
 
-// MAIN FUNCTION
 int main()
 {
     Queue q1, q2;

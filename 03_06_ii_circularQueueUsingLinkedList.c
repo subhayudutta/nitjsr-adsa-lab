@@ -20,7 +20,7 @@ void enqueue(int val)
     {
         rear->next = newNode;
         rear = newNode;
-        rear->next = front; // circular link
+        rear->next = front;
     }
 }
 

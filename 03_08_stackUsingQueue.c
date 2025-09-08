@@ -10,14 +10,12 @@ typedef struct
     int rear;
 } Queue;
 
-// Stack using two queues
 typedef struct
 {
     Queue q1;
     Queue q2;
 } Stack;
 
-//  Queue Operations
 void initQueue(Queue *q)
 {
     q->front = q->rear = -1;
@@ -68,8 +66,6 @@ int front(Queue *q)
         return -1;
     return q->arr[q->front];
 }
-
-//  Stack using Queues
 
 //  Method 1: Costly Enqueue (Push)
 void push_costlyEnqueue(Stack *s, int data)
@@ -124,7 +120,6 @@ int pop_costlyDequeue(Stack *s)
     return popped;
 }
 
-// MAIN FUNCTION
 int main()
 {
     Stack s1, s2;
