@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Node for linked list inside each bucket
 typedef struct Node
 {
     float data;
     struct Node *next;
 } Node;
 
-// Insert in sorted order (like insertion sort)
 Node *insertSorted(Node *head, float value)
 {
     Node *newNode = (Node *)malloc(sizeof(Node));
@@ -31,7 +29,6 @@ Node *insertSorted(Node *head, float value)
     return head;
 }
 
-// Address Calculation Sort (Scatter Sort)
 void addressCalculationSort(float arr[], int n)
 {
     Node **buckets = (Node **)malloc(n * sizeof(Node *));
@@ -62,7 +59,6 @@ void addressCalculationSort(float arr[], int n)
     free(buckets);
 }
 
-// Main function to test the sorting
 int main()
 {
     int A[50], n;

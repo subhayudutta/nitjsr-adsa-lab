@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to find the maximum value in the array
 int getMax(int arr[], int n)
 {
     int max = arr[0];
@@ -11,7 +10,6 @@ int getMax(int arr[], int n)
     return max;
 }
 
-// Counting Sort function
 void countingSort(int arr[], int n)
 {
     int max = getMax(arr, n);
@@ -31,7 +29,6 @@ void countingSort(int arr[], int n)
     }
 }
 
-// Main function to test the sorting
 int main()
 {
     int A[50], n;

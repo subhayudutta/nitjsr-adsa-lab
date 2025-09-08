@@ -5,7 +5,6 @@
 
 #define MAX 100
 
-// Operator stack
 char stack[MAX];
 int top = -1;
 
@@ -36,7 +35,6 @@ char peek()
     return stack[top];
 }
 
-// Precedence
 int prec(char c)
 {
     if (c == '/' || c == '*')
@@ -47,7 +45,6 @@ int prec(char c)
         return -1;
 }
 
-// -------- Infix → Postfix --------
 void infixToPostfix(char *exp, char postfix[][MAX], int *n)
 {
     int len = strlen(exp);
@@ -62,7 +59,6 @@ void infixToPostfix(char *exp, char postfix[][MAX], int *n)
 
         if (isdigit(c))
         {
-            // multi-digit numbers
             char num[MAX];
             int k = 0;
             while (i < len && isdigit(exp[i]))
@@ -71,7 +67,7 @@ void infixToPostfix(char *exp, char postfix[][MAX], int *n)
             }
             num[k] = '\0';
             strcpy(postfix[j++], num);
-            i--; // adjust
+            i--;
         }
         else if (c == '(')
         {
@@ -84,10 +80,10 @@ void infixToPostfix(char *exp, char postfix[][MAX], int *n)
                 char op[2] = {pop(), '\0'};
                 strcpy(postfix[j++], op);
             }
-            pop(); // remove '('
+            pop();
         }
         else
-        { // operator
+        {
             while (top != -1 && prec(c) <= prec(peek()))
             {
                 char op[2] = {pop(), '\0'};
@@ -106,7 +102,6 @@ void infixToPostfix(char *exp, char postfix[][MAX], int *n)
     *n = j;
 }
 
-// -------- Postfix Evaluation --------
 int evaluatePostfix(char postfix[][MAX], int n)
 {
     int valStack[MAX];
@@ -144,7 +139,6 @@ int evaluatePostfix(char postfix[][MAX], int n)
     return valStack[topVal];
 }
 
-// -------- Main --------
 int main(int argc, char *argv[])
 {
     if (argc < 2)
@@ -153,7 +147,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Join command line args into one expression string
     char expr[MAX * 10] = "";
     for (int i = 1; i < argc; i++)
     {

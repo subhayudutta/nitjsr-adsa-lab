@@ -1,12 +1,10 @@
 #include <stdio.h>
 
-// Function to get the bit at a given position
 int getBit(int num, int bitPos)
 {
     return (num >> bitPos) & 1;
 }
 
-// Radix Exchange Sort function
 void radixExchangeSort(int arr[], int left, int right, int bitPos)
 {
     if (left >= right || bitPos < 0)
@@ -36,7 +34,6 @@ void radixExchangeSort(int arr[], int left, int right, int bitPos)
     radixExchangeSort(arr, i, right, bitPos - 1);
 }
 
-// Function to find the maximum bit position needed
 int getMaxBitPos(int arr[], int n)
 {
     int max = arr[0];
@@ -50,7 +47,6 @@ int getMaxBitPos(int arr[], int n)
     return bitPos - 1;
 }
 
-// Main function to test the sorting
 int main()
 {
     int A[50], n;

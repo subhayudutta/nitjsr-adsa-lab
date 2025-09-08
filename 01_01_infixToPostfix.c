@@ -5,7 +5,6 @@
 
 #define MAX 100
 
-// Stack operations
 char stack[MAX];
 int top = -1;
 
@@ -36,7 +35,6 @@ char peek()
     return stack[top];
 }
 
-// Precedence function
 int prec(char c)
 {
     if (c == '/' || c == '*')
@@ -47,7 +45,6 @@ int prec(char c)
         return -1;
 }
 
-// Infix to Postfix conversion
 void infixToPostfix(char *exp)
 {
     int len = strlen(exp);
@@ -72,7 +69,7 @@ void infixToPostfix(char *exp)
             {
                 result[j++] = pop();
             }
-            pop(); // Remove '('
+            pop();
         }
         else
         {
@@ -93,7 +90,6 @@ void infixToPostfix(char *exp)
     printf("Postfix: %s\n", result);
 }
 
-// Main function
 int main()
 {
     char exp[MAX];

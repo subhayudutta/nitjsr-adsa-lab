@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Function to swap two elements
 void swap(int *a, int *b)
 {
     int temp = *a;
@@ -8,7 +7,6 @@ void swap(int *a, int *b)
     *b = temp;
 }
 
-// Partition function
 int partition(int arr[], int low, int high)
 {
     int pivot = arr[high];
@@ -26,7 +24,6 @@ int partition(int arr[], int low, int high)
     return i + 1;
 }
 
-// QuickSort function
 void quickSort(int arr[], int low, int high)
 {
     if (low < high)

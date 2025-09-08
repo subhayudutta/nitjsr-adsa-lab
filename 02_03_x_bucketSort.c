@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Node for linked list in each bucket
 typedef struct Node
 {
     float data;
     struct Node *next;
 } Node;
 
-// Function to insert an element into a sorted linked list (for bucket)
 Node *insertSorted(Node *head, float value)
 {
     Node *newNode = (Node *)malloc(sizeof(Node));
@@ -30,7 +28,6 @@ Node *insertSorted(Node *head, float value)
     return head;
 }
 
-// Bucket Sort function
 void bucketSort(float arr[], int n)
 {
     Node **buckets = (Node **)malloc(n * sizeof(Node *));
@@ -59,7 +56,6 @@ void bucketSort(float arr[], int n)
     free(buckets);
 }
 
-// Main function to test the sorting
 int main()
 {
     int A[50], n;

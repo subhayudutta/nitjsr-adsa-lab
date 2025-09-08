@@ -3,7 +3,6 @@
 
 #define MAX 1000
 
-// Function to get the maximum value in the array
 int getMax(int arr[], int n)
 {
     int max = arr[0];
@@ -13,7 +12,6 @@ int getMax(int arr[], int n)
     return max;
 }
 
-// Counting sort used as a subroutine in radix sort
 void countingSort(int arr[], int n, int exp)
 {
     int output[n];
@@ -36,7 +34,6 @@ void countingSort(int arr[], int n, int exp)
         arr[i] = output[i];
 }
 
-// Main Radix Sort function
 void radixSort(int arr[], int n)
 {
     int max = getMax(arr, n);
@@ -45,7 +42,6 @@ void radixSort(int arr[], int n)
         countingSort(arr, n, exp);
 }
 
-// Main function to test the sorting
 int main()
 {
     int A[50], n;
